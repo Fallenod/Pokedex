@@ -1,12 +1,21 @@
 import Header from './Header';
 import Cards from './Cards.js';
+import CardInfo from './CardInfo.js';
+import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 
 const App = (props) => {
   return (
-    <div>
-     <Header />
-     <Cards {...props} />
-    </div>
+    <Router>
+        <Header />
+        <Switch>
+          <Route exact path="/">
+            <Cards {...props} />
+          </Route>
+          <Route path="/c">
+            <CardInfo/>
+          </Route>
+        </Switch>
+    </Router>
   );
 }
 

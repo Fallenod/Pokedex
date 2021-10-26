@@ -24,6 +24,7 @@ const Cards = (props) =>  {
                     name={name[0].toUpperCase() + name.slice(1)} 
                     types={types}
                     />
+
                 </div>
             ))
            
