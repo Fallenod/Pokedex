@@ -2,19 +2,20 @@
 import { useEffect, useState } from "react"
 import { getPokemons } from "./pokemonsData";
 import Card from './Card';
+import Loader from "./Loader"
 
 
 const Cards = (props) =>  {
     const [items, setItems] = useState(undefined);
-    
     const fetchPokemons = async () => {
-        const data = await getPokemons(30)
+        const data = await getPokemons(50)
         setItems(data)
     }
 
     useEffect(() => {
         fetchPokemons()
     }, []);
+    
     return <div className="cards">
         {
          items ? items.map(({id, name, types}) => (
@@ -28,7 +29,7 @@ const Cards = (props) =>  {
                 </div>
             ))
            
-            : 'loading'
+            : <Loader/>
         }
     </div>
 }

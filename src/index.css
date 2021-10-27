@@ -10,11 +10,12 @@ html {font-size: 10px; background-color: var(--primary);font-family: 'Baloo Da 2
 ul {list-style: none;padding: 0;margin: 0;}
 .cards {
   display: flex;
+  justify-content: center;
+  align-items: center; 
   flex-wrap: wrap;
   gap: 1rem;
   margin: 0 auto;
   max-width: 1100px;
-  
 }
 
 .cards__item {
@@ -132,6 +133,9 @@ input:checked + .slider:before {
 .img-container {
   width: 100%;
   background-color: var(--secondary);
+  display: flex;
+  justify-content: center;
+  align-items: center; 
   border-radius: 2.4rem;
   padding-top: 3rem;
   cursor: pointer;
@@ -267,4 +271,14 @@ meter {
 .stats-wrap-list > li {
   display: flex;
   justify-content: space-between;
+}
+.nextLoadButton {
+  color: #fff !important;
+	text-transform: uppercase;
+	text-decoration: none;
+	background: #ed3330;
+	padding: 20px;
+	border-radius: 5px;
+	display: inline-block;
+	border: none;
 }

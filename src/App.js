@@ -11,7 +11,7 @@ const App = (props) => {
           <Route exact path="/">
             <Cards {...props} />
           </Route>
-          <Route path="/c">
+          <Route exact path="/pokemon/:id">
             <CardInfo/>
           </Route>
         </Switch>

@@ -1,17 +1,21 @@
-
+import React, { Suspense } from "react";
 import Type from './Type';
-
+import {useHistory} from 'react-router-dom';
+import Loader from "./Loader"
+const LazyImage = React.lazy(() => import('./LazyImage'));
 const Card = ({
   id,
   name,
   types
 }) => {
-
+  const router = useHistory()
   let srcImg = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/" + id + ".png"
   return (
-    <div className="poke-container">
+    <div onClick={() => router.push(`/pokemon/${id}`)} className="poke-container">
                 <div  className="img-container">
-                    <img src= {srcImg} alt="" />
+                  <Suspense fallback={<Loader/>}>
+                      <LazyImage srcImg={srcImg}/>
+                  </Suspense>
                 </div>
                 <div className="info-container">
                     <h3 className="name">{name}</h3>
