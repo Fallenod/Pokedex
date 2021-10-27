@@ -1,0 +1,2 @@
+(this.webpackJsonppokedex=this.webpackJsonppokedex||[]).push([[3],{35:function(e,s,t){"use strict";t.r(s);var c=t(1);s.default=function(e){var s=e.srcImg;return Object(c.jsx)("img",{src:s,alt:""})}}}]);
+//# sourceMappingURL=3.4dbeffde.chunk.js.map
