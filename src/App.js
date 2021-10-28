@@ -10,12 +10,12 @@ const App = (props) => {
     <Router forceRefresh={true}>
         <Header />
         <Switch>
-          <Route exact path="/">
+          <Route exact path="/Pokedex/">
             <Suspense fallback={<Loader/>}>
               <Cards {...props} /> 
             </Suspense>
           </Route>
-          <Route exact path="/pokemon/:id">
+          <Route exact path="/Pokedex/pokemon/:id">
             <CardInfo/>
           </Route>
         </Switch>

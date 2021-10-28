@@ -11,7 +11,7 @@ const Card = ({
   const router = useHistory()
   let srcImg = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/" + id + ".png"
   return (
-    <div onClick={() => router.push(`/pokemon/${id}`)} className="poke-container">
+    <div onClick={() => router.push(`/Pokedex/pokemon/${id}`)} className="poke-container">
                 <div  className="img-container">
                   <Suspense fallback={<Loader/>}>
                       <LazyImage srcImg={srcImg}/>

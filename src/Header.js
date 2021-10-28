@@ -8,7 +8,7 @@ function Header() {
         <div className="header">
             <div className="header-logo">
                 
-                    <Link to="/">
+                    <Link to="/Pokedex/">
                         <img src={logo} loading="lazy" alt=""/>
                     </Link>
                     <h1 className="header-title">Pokedex</h1>

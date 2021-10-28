@@ -29,13 +29,13 @@ function CardInfo() {
     let prevButton
     let nextButton
     if(prevPokemon > 0) {
-        prevButton = <div className="switch" onClick={() => router.push(`/pokemon/${prevPokemon}`)}>{`< #${prevPokemon}`}</div>
+        prevButton = <div className="switch" onClick={() => router.push(`/Pokedex/pokemon/${prevPokemon}`)}>{`< #${prevPokemon}`}</div>
     }
     else {
         prevButton = ""
     }
     if(nextPokemon < 899) {
-        nextButton = <div className="switch left" onClick={() => router.push(`/pokemon/${nextPokemon}`)} >{`#${nextPokemon} >`}</div>
+        nextButton = <div className="switch left" onClick={() => router.push(`/Pokedex/pokemon/${nextPokemon}`)} >{`#${nextPokemon} >`}</div>
     }
     else {
         nextButton = ""
