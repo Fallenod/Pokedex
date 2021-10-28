@@ -1,0 +1,1 @@
+{"version":3,"sources":["LazyImage.js"],"names":["LazyImage","srcImg","src","alt"],"mappings":"qHAMeA,UAJf,YAA8B,IAAVC,EAAS,EAATA,OAChB,OAAS,qBAAMC,IAAKD,EAAQE,IAAI","file":"static/js/3.2306572e.chunk.js","sourcesContent":["\r\n\r\nfunction LazyImage({srcImg}) {\r\n    return ( <img  src={srcImg} alt=\"\" /> );\r\n}\r\n\r\nexport default LazyImage;"],"sourceRoot":""}
