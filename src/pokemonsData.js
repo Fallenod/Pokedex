@@ -9,6 +9,7 @@ export const getPokemons = async (limit = 25, offset = 1) => {
             throw Error('Something wrong')
         }
         data[i] = result
+        
 
     }
     return Object.values(data)

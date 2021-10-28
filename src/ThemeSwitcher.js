@@ -8,12 +8,14 @@ function ThemeSwitcher() {
             document.documentElement.style.setProperty('--secondary',"#424242");
             document.documentElement.style.setProperty('--info-color',"#eceff1");
             document.documentElement.style.setProperty('--invert',"invert(1)");
+            localStorage.setItem('darkTheme', true);
         }
         else {
             document.documentElement.style.setProperty('--primary',"#eeeeee");
             document.documentElement.style.setProperty('--secondary',"#dadada");
             document.documentElement.style.setProperty('--info-color',"#4d4d4d");
             document.documentElement.style.setProperty('--invert',"invert(0)");
+            localStorage.setItem('darkTheme', false);
         }
         lightMark = !lightMark
     }

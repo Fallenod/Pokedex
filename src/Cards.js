@@ -7,15 +7,20 @@ import Loader from "./Loader"
 
 const Cards = (props) =>  {
     const [items, setItems] = useState(undefined);
+    const [limit, setLimit] = useState(10); 
+    const [min, setMin] = useState(1); 
     const fetchPokemons = async () => {
-        const data = await getPokemons(50)
-        setItems(data)
+        const data = await getPokemons(limit, min)
+        setItems(items ? [...items, ...data] : data);
+        setMin(limit + 1)
+        setLimit(limit + 10)
     }
-
+    const loadMore = () => {
+        fetchPokemons()
+      };
     useEffect(() => {
         fetchPokemons()
     }, []);
-    
     return <div className="cards">
         {
          items ? items.map(({id, name, types}) => (
@@ -31,6 +36,9 @@ const Cards = (props) =>  {
            
             : <Loader/>
         }
+        {items && <div className="loadButton-wrapper">
+            <button className="loadButton" onClick={loadMore}>Load more Pokemons!</button>
+        </div> }
     </div>
 }
 
