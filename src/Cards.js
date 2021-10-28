@@ -7,13 +7,13 @@ import Loader from "./Loader"
 
 const Cards = (props) =>  {
     const [items, setItems] = useState(undefined);
-    const [limit, setLimit] = useState(10); 
+    const [limit, setLimit] = useState(20); 
     const [min, setMin] = useState(1); 
     const fetchPokemons = async () => {
         const data = await getPokemons(limit, min)
         setItems(items ? [...items, ...data] : data);
         setMin(limit + 1)
-        setLimit(limit + 10)
+        setLimit(limit + 20)
     }
     const loadMore = () => {
         fetchPokemons()
