@@ -1,7 +1,7 @@
 import Header from './Header';
 import Cards from './Cards.js';
 import CardInfo from './CardInfo.js';
-import {HashRouter as Router, Route, Switch} from "react-router-dom";
+import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import Loader from "./Loader"
 import { Suspense } from "react";
 

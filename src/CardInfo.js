@@ -40,7 +40,7 @@ function CardInfo() {
     else {
         nextButton = ""
     }
-    return ( 
+    return ( <>
         <div>
             <div className="switch-wrap">
                 {prevButton}
@@ -79,6 +79,7 @@ function CardInfo() {
         
             </div>
         </div>
+        </>
     );
   }
 
