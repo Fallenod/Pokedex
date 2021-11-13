@@ -1,5 +1,3 @@
-
-
 function ThemeSwitcher() {
     let lightMark = true
     function changeTheme(e) {

@@ -1,8 +1,8 @@
 
 import { useEffect, useState } from "react"
-import { getPokemons } from "./pokemonsData";
-import Card from './Card';
-import Loader from "./Loader"
+import { getPokemons } from "../api/pokemonsData";
+import Card from '../components/Card';
+import Loader from "../components/Loader/Loader.js"
 
 
 const Cards = (props) =>  {

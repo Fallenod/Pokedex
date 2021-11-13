@@ -1,21 +1,17 @@
-import Header from './Header';
-import Cards from './Cards.js';
-import CardInfo from './CardInfo.js';
-import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
-import Loader from "./Loader"
-import { Suspense } from "react";
+import Header from './components/Header/Header';
+import Cards from './pages/Cards.js';
+import CardInfo from './pages/CardInfo.js';
+import {HashRouter as Router, Route, Switch} from "react-router-dom";
 
-const App = (props) => {
+const App = () => {
   return (
-    <Router forceRefresh={true}>
+    <Router basename="/Pokedex/" forceRefresh={true}>
         <Header />
         <Switch>
-          <Route exact path="/Pokedex/">
-            <Suspense fallback={<Loader/>}>
-              <Cards {...props} /> 
-            </Suspense>
+          <Route exact path="/">
+            <Cards /> 
           </Route>
-          <Route exact path="/Pokedex/pokemon/:id">
+          <Route path="/pokemon/:id">
             <CardInfo/>
           </Route>
         </Switch>
